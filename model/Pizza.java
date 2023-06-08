@@ -4,6 +4,7 @@ public class Pizza{
     private String sabor;
     private double valor;
     private char tamanho;
+    private String nome;
 
     public Pizza(String sabor, double valor, char tamanho) {
         this.sabor = sabor;
@@ -12,8 +13,18 @@ public class Pizza{
     }
 
     public String pedidoIfood(){
-        return String.format()
+        return String.format("Sabor: %s - Valor: %.2f - Tamanho: %s", getSabor(), getValor(), getTamanho());
     }
+
+    public Pizza(String nome){
+        this.nome = nome;
+    }
+
+    public String nomeCliente(){
+        return String.format("\n%s! Seu pedido chegou em nosso Whatsapp, logo logo está chegando em sua casa!", getNome());
+    }
+    
+
 
     public String getSabor() {
         return sabor;
@@ -37,6 +48,14 @@ public class Pizza{
 
     public void setTamanho(char tamanho) {
         this.tamanho = tamanho;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
 }
